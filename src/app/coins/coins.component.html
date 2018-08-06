@@ -1,10 +1,11 @@
 <input type="text" class="form-control" (input)="onUpdateCoinBet($event)" placeholder="Your bet ?">
-<p> {{ coinBet }} </p>
+<!-- <p> {{ coinBet }} </p> -->
 
 <button class="btn btn-primary" [disabled]="!allowNewCoin" (click)="onNewToss()">
     Toss a New Coin
 </button>
-<p> {{ coinTossStatus }} </p>
+<!-- <p> {{ coinTossStatus }} </p> -->
+<p *ngIf="tossMade">A new toss was made, your bet is {{ coinBet }} </p>
 
 <app-coin></app-coin>
 <app-coin></app-coin>

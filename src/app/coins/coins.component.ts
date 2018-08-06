@@ -9,6 +9,7 @@ export class CoinsComponent implements OnInit {
   allowNewCoin = false;
   coinTossStatus = 'No new toss was made !';
   coinBet = '';
+  tossMade = false;
 
   constructor() {
     setTimeout(() => {
@@ -20,7 +21,8 @@ export class CoinsComponent implements OnInit {
   }
 
   onNewToss() {
-    this.coinTossStatus = 'A new toss was made !';
+    this.tossMade = true;
+    this.coinTossStatus = 'A new toss was made ! Your bet is ' + this.coinBet;
   }
 
   onUpdateCoinBet(event: Event) {
