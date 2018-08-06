@@ -10,6 +10,7 @@ export class CoinsComponent implements OnInit {
   coinTossStatus = 'No new toss was made !';
   coinBet = '';
   tossMade = false;
+  coins = ['flip', 'flop'];
 
   constructor() {
     setTimeout(() => {
@@ -22,6 +23,7 @@ export class CoinsComponent implements OnInit {
 
   onNewToss() {
     this.tossMade = true;
+    this.coins.push(this.coinBet);
     this.coinTossStatus = 'A new toss was made ! Your bet is ' + this.coinBet;
   }
 
