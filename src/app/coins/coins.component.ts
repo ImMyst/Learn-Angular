@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CoinsComponent implements OnInit {
   allowNewCoin = false;
   coinTossStatus = 'No new toss was made !';
+  coinBet = '';
 
   constructor() {
     setTimeout(() => {
@@ -22,4 +23,7 @@ export class CoinsComponent implements OnInit {
     this.coinTossStatus = 'A new toss was made !';
   }
 
+  onUpdateCoinBet(event: Event) {
+    this.coinBet = (<HTMLInputElement>event.target).value;
+  }
 }

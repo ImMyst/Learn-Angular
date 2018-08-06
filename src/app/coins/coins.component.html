@@ -1,3 +1,6 @@
+<input type="text" class="form-control" (input)="onUpdateCoinBet($event)" placeholder="Your bet ?">
+<p> {{ coinBet }} </p>
+
 <button class="btn btn-primary" [disabled]="!allowNewCoin" (click)="onNewToss()">
     Toss a New Coin
 </button>
