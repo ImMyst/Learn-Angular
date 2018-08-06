@@ -1,0 +1,26 @@
+button:disabled {
+    background-color: #ff3c0096;
+    border-color: #ff3c0096;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #ff3c0096;
+    border-color: #ff3c0096;
+}
+
+button {
+    background-color: #47bb75e5;
+    border-color: #47bb75e5;
+    margin: 1rem 0 2rem 0;
+}
+
+button:hover {
+    background-color: #5ccf8ae1;
+    border-color: #5ccf8ae1;
+}
+
+button:active {
+    background-color: #36a562e1 !important;
+    border-color: #36a562e1 !important;
+}
