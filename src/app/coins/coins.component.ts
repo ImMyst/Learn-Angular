@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoinComponent } from '../coin/coin.component';
 
 @Component({
   selector: 'app-coins',
@@ -11,12 +12,15 @@ export class CoinsComponent implements OnInit {
   coinBet = '';
   tossMade = false;
   coins = ['flip', 'flop'];
+  coinFlipResult = 'flip';
 
   constructor() {
     setTimeout(() => {
       this.allowNewCoin = true;
     }, 2500);
-  }
+        this.coinFlipResult = Math.random() > 0.5 ? 'flip' : 'flop';
+    }
+
 
   ngOnInit() {
   }
@@ -25,6 +29,11 @@ export class CoinsComponent implements OnInit {
     this.tossMade = true;
     this.coins.push(this.coinBet);
     this.coinTossStatus = 'A new toss was made ! Your bet is ' + this.coinBet;
+    if (this.coinBet === this.coinFlipResult) {
+      console.log('Salut');
+    } else {
+      console.log('Dommage');
+    }
   }
 
   onUpdateCoinBet(event: Event) {
